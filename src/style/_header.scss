@@ -1,0 +1,22 @@
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+
+    .menu-hamburger{
+        margin-right: 1em;
+    }
+
+    .cart-and-avatar {
+        display: flex;
+        gap: 2em;
+        
+        img {
+            height: 25px;
+            width: auto;
+        }
+    }
+
+}
