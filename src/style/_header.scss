@@ -7,6 +7,7 @@
 
     .menu-hamburger{
         margin-right: 1em;
+        cursor: pointer;
     }
 
     .cart-and-avatar {
@@ -19,4 +20,38 @@
         }
     }
 
+    .menu-open {
+    position: fixed; 
+  z-index: 10; 
+  left: 0;
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  
+
+
+  .menu-open-main {
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    padding: 1em 0 0 2em;
+
+  
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 2em;
+    
+  }
+    }
+    }
+
+    .cart {
+      cursor: pointer;
+    }
 }
