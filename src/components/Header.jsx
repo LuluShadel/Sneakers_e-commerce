@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 
 
 
+
 export default function Header() {
 
     const [menu,setMenu] = useState(false);
@@ -23,42 +24,41 @@ export default function Header() {
         setMenu(false);
     }
 
+return (
 
-
-    return ( 
-        <div className="flex h-4 m-2 justify-between items-center " >
-            <div className="flex gap-4   ">
-                <img src={iconmenu} alt="icon menu" onClick={handleMenu} className="cursor-pointer md:hidden" />
-                <img src={logo} alt="Logo" />
-            </div>
-            {menu &&
-            <div className=" fixed left-0 top-0 w-full h-full bg-gray-950 bg-opacity-30">
-                <div className="bg-white h-full w-1/2 pt-2 pl-2 ">
-                
-                <img src={close} alt="icon croix" onClick={handleMenuClose} className="cursor-pointer"/>
+    <div className="flex m-2 justify-between items-center md:border-b-2 md:mt-6 md:pb-10">
+    <div className="flex gap-4 items-center">
+        <img src={iconmenu} alt="icon menu" onClick={handleMenu} className="cursor-pointer md:hidden" />
+        <img src={logo} alt="Logo" />
+        <div>
+            <nav className="ml-4 gap-6 hidden text-slate-500 md:flex items-center">
+                <Link to="#" className="hover:border-b-4 border-orange-400 ">Collection</Link>
+                <Link to="#" className="hover:border-b-4 border-orange-400 ">Men</Link>
+                <Link to="#" className="hover:border-b-4 border-orange-400 ">Women</Link>
+                <Link to="#" className="hover:border-b-4 border-orange-400 ">About</Link>
+                <Link to="#" className="hover:border-b-4 border-orange-400 ">Contact</Link>
+            </nav>
+        </div>
+    </div>
+    {menu && (
+        <div className="fixed left-0 top-0 w-full h-full bg-gray-950 bg-opacity-30">
+            <div className="bg-white h-full w-3/4 pt-2 pl-6">
+                <img src={close} alt="icon croix" onClick={handleMenuClose} className="cursor-pointer" />
                 <nav className="flex flex-col font-bold mt-10 gap-6">
-                 <Link to="#" >Collection</Link>
-                 <Link to="#" >Men</Link>
-                 <Link to="#" >Women</Link>
-                 <Link to="#" >About</Link>
-                 <Link to="#" >Contact</Link>
-                 </nav>
-                 </div>
-                 </div>
-            }
-            <div>
-            <nav className="gap-6 hidden text-slate-500 md:flex ">
-                 <Link to="#" >Collection</Link>
-                 <Link to="#" >Men</Link>
-                 <Link to="#" >Women</Link>
-                 <Link to="#" >About</Link>
-                 <Link to="#" >Contact</Link>
-                 </nav>
-            </div>
-            <div className="flex h-6 gap-3">
-                <img src={cartLogo} alt="icon panier" />
-                <img src={avatar} alt="Avatar client" className="h-7" />
+                    <Link to="#">Collection</Link>
+                    <Link to="#">Men</Link>
+                    <Link to="#">Women</Link>
+                    <Link to="#">About</Link>
+                    <Link to="#">Contact</Link>
+                </nav>
             </div>
         </div>
-    )
-}
+    )}
+    <div className="flex gap-3 items-center">
+        <img src={cartLogo} alt="icon panier" className="cursor-pointer" />
+        <img src={avatar} alt="Avatar client" className="h-7 md:h-12 cursor-pointer" />
+    </div>
+</div>
+
+)
+    }
