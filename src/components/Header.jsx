@@ -41,7 +41,7 @@ return (
         </div>
     </div>
     {menu && (
-        <div className="fixed left-0 top-0 w-full h-full bg-gray-950 bg-opacity-30">
+        <div className="fixed left-0 top-0 w-full h-full bg-gray-950 bg-opacity-30 z-10">
             <div className="bg-white h-full w-3/4 pt-2 pl-6">
                 <img src={close} alt="icon croix" onClick={handleMenuClose} className="cursor-pointer" />
                 <nav className="flex flex-col font-bold mt-10 gap-6">
