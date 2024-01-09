@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import CarouselSmall from "../components/Carrousel"
 import Text from "../components/Text"
 import Price from "../components/Price";
-import AddCart from "../components/addCart";
+import AddItem from "../components/addItem";
 
 
 import data from "../assets/data"
@@ -55,7 +55,7 @@ export default function Home () {
              promo={promotion}
              />
 
-             <AddCart
+             <AddItem
              addCart={addCart}
              setAddCart={setAddCart}
               />
