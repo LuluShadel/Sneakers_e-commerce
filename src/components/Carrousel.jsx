@@ -11,7 +11,10 @@ const images = [img1, img2, img3, img4];
 
 const transition = { duration: 0.5, ease: 'easeInOut' };
 
-const Carousel = () => {
+
+
+
+const Carousel = ({cart}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const showSlide = (slideIndex) => {
@@ -49,6 +52,17 @@ const Carousel = () => {
       >
         <img src={arrowRight} alt='fleche' />
       </div>
+
+      {cart&&(
+        <div className='absolute top-0 left-1/2 z-30 bg-white w-[95%] h-3/4 mt-1 -translate-x-1/2 rounded-lg  '>
+          <div className='border-b-2 border-slate-200 p-5'>
+          <p className='font-bold'>Cart</p>
+          </div>
+          <div className=' h-3/4 flex items-center justify-center'>
+          <p className='text-center text-slate-500 font-bold '>Your cart is empty.</p>
+          </div>
+          </div>
+      )}
     </div>
   );
 };

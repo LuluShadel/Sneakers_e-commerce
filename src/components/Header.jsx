@@ -13,9 +13,11 @@ import { Link } from "react-router-dom";
 
 
 
-export default function Header() {
+export default function Header({cart,setCart}) {
 
-    const [menu,setMenu] = useState(false);
+
+    // modal contenant la nav sur mobile 
+    const [menu,setMenu] = useState(false); 
 
     const handleMenu = ()=> {
         setMenu(true);
@@ -23,6 +25,13 @@ export default function Header() {
     const handleMenuClose = () => {
         setMenu(false);
     }
+    //
+
+    // panier 
+    const handleCart = () =>{
+        setCart(!cart)
+    }
+   
 
 return (
 
@@ -55,8 +64,14 @@ return (
         </div>
     )}
     <div className="flex gap-3 items-center">
-        <img src={cartLogo} alt="icon panier" className="cursor-pointer" />
+        <img 
+        src={cartLogo} 
+        alt="icon panier" 
+        className="cursor-pointer"
+        onClick={handleCart}
+        />
         <img src={avatar} alt="Avatar client" className="h-7 md:h-12 cursor-pointer" />
+
     </div>
 </div>
 
