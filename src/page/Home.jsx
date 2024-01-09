@@ -15,8 +15,12 @@ export default function Home () {
  
     const { brand, title, text, oldPrice, newPrice, promotion  } = data[0];
 
-    //panier 
+    //panier ouverture 
     const [cart,setCart] =useState(false);
+
+    // panier ajout 
+
+    const [addCart, setAddCart] =useState(0)
 
     return (
         <div>
@@ -29,7 +33,15 @@ export default function Home () {
             <CarouselSmall 
             cart={cart}
             setCart={setCart}
+            addCart={addCart}
+            setAddCart={setAddCart}
+            newPrice={newPrice}
+            title={title}
+            
+
              />
+
+
              <div className="ml-4 mr-4">
              <Text 
              brand={brand} 
@@ -43,7 +55,10 @@ export default function Home () {
              promo={promotion}
              />
 
-             <AddCart />
+             <AddCart
+             addCart={addCart}
+             setAddCart={setAddCart}
+              />
 
 
              </div>

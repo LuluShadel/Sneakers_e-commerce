@@ -6,7 +6,13 @@ import cart from "..//assets/icon-cart-white.svg"
 
 
 
-export default function AddCart () {
+export default function AddCart ({addCart,setAddCart}) {
+
+
+    const handleAddCart = () => {
+        setAddCart(addCart +1)
+    }
+
     return (
         <div className="mt-4 mb-12">
             <div className="bg-slate-200 flex items-center justify-between pl-6 pr-6 rounded-md h-12 mb-4">
@@ -17,7 +23,11 @@ export default function AddCart () {
             </div>
             <div className="bg-orange-500 flex items-center justify-center h-12 rounded-md">
                 <img src={cart} alt="panier" className=" mr-4" />
-                <p className="text-white font-semibold">Add to cart</p>
+                <p 
+                className="text-white font-semibold"
+                onClick={handleAddCart}
+                
+                >Add to cart</p>
 
 
             </div>
