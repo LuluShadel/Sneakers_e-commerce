@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Routes, } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
+import Home from './page/Home';
 
 import Header from './components/Header';
 
@@ -13,7 +14,7 @@ root.render(
     <Router>
       <Header />
       <Routes>
-        
+      <Route path='/' element={<Home />} />
       </Routes>
     </Router>
     

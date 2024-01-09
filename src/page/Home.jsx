@@ -1,9 +1,18 @@
+import CarouselSmall from "../components/Carrousel"
+import data from "../assets/data.js"
+
 
 
 export default function Home () {
+ 
+   
+
+
     return (
         <div>
-            <p>Home</p>
+      
+            <CarouselSmall data={data}
+             />
         </div>
     )
 }
