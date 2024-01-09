@@ -1,18 +1,28 @@
 import CarouselSmall from "../components/Carrousel"
-import data from "../assets/data.js"
+import Text from "../components/Text"
+
+
+import data from "../assets/data"
 
 
 
 export default function Home () {
  
-   
+    const { brand, title, text } = data[0];
 
 
     return (
         <div>
       
-            <CarouselSmall data={data}
+            <CarouselSmall 
              />
+             
+             <Text 
+             brand={brand} 
+             title={title} 
+             text={text} 
+             />
+             
         </div>
     )
 }
