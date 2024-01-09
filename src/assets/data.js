@@ -11,9 +11,9 @@ const data = [
             "../assets/image-product-3.jpg",
             "../assets/image-product-4.jpg",
         ],
-        "oldPrice":"$255.00",
+        "oldPrice":"255.00",
         "promotion":"50%",
-        "newPrice":"$125.00"
+        "newPrice":"125.00"
     }
 ]
 

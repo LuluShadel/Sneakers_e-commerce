@@ -34,7 +34,7 @@ export default function Cart ({cart,addCart,title,newPrice,setAddCart}) {
             <p>{title}</p>
             <div>
               <p>
-                {newPrice} x {addCart}
+                {newPrice} x {addCart} <span className="font-bold text-black">${newPrice * addCart}</span>
               </p>
             </div>
           </div>

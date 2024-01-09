@@ -51,7 +51,7 @@ export default function AddItem ({setAddCart,quantity,setQuantity}) {
             <div className="bg-orange-500 flex items-center justify-center h-12 rounded-md">
                 <img src={cart} alt="panier" className=" mr-4" />
                 <p 
-                className="text-white font-semibold"
+                className="text-white font-semibold cursor-pointer"
                 onClick={handleAddCart}
                 
                 >Add to cart</p>
