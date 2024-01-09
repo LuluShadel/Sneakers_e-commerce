@@ -1,6 +1,7 @@
 import CarouselSmall from "../components/Carrousel"
 import Text from "../components/Text"
 import Price from "../components/Price";
+import AddCart from "../components/addCart";
 
 
 import data from "../assets/data"
@@ -17,7 +18,7 @@ export default function Home () {
       
             <CarouselSmall 
              />
-             
+             <div className="ml-4 mr-4">
              <Text 
              brand={brand} 
              title={title} 
@@ -29,7 +30,11 @@ export default function Home () {
              newPrice={newPrice}
              promo={promotion}
              />
-             
+
+             <AddCart />
+
+
+             </div>
         </div>
     )
 }

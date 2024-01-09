@@ -23,7 +23,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative z-0">
+    <div className="relative z-0 mt-4">
       
         <div>
           <motion.img
