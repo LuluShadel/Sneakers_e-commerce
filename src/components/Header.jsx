@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 
 
 
-export default function Header({cart,setCart}) {
+export default function Header({cart,setCart,addCart}) {
 
 
     // modal contenant la nav sur mobile 
@@ -64,12 +64,19 @@ return (
         </div>
     )}
     <div className="flex gap-3 items-center">
+        <div className="relative">
         <img 
         src={cartLogo} 
         alt="icon panier" 
         className="cursor-pointer"
         onClick={handleCart}
         />
+        {addCart !== 0 && (
+  <p className="text-white bg-orange-400 text-center rounded-full text-xs absolute top-0 left-3 pr-1 pl-1">
+    {addCart}
+  </p>
+        )}
+        </div>
         <img src={avatar} alt="Avatar client" className="h-7 md:h-12 cursor-pointer" />
 
     </div>

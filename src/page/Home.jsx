@@ -19,8 +19,10 @@ export default function Home () {
     const [cart,setCart] =useState(false);
 
     // panier ajout 
-
     const [addCart, setAddCart] =useState(0)
+
+    // contrôle quantité du client
+  const [quantity, setQuantity] = useState(0)
 
     return (
         <div>
@@ -28,6 +30,7 @@ export default function Home () {
             <Header
             cart={cart}
             setCart={setCart}
+            addCart={addCart}
             
             />
             <CarouselSmall 
@@ -58,6 +61,8 @@ export default function Home () {
              <AddItem
              addCart={addCart}
              setAddCart={setAddCart}
+             quantity={quantity}
+             setQuantity={setQuantity}
               />
 
 

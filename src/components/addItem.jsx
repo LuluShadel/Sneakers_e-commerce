@@ -3,15 +3,15 @@ import moins from "../assets/icon-minus.svg"
 import plus from "../assets/icon-plus.svg"
 import cart from "..//assets/icon-cart-white.svg"
 
-import { useState } from "react"
 
 
 
 
-export default function AddItem ({setAddCart}) {
 
-     // contrôle quantité du client
-  const [quantity, setQuantity] = useState(0)
+
+export default function AddItem ({setAddCart,quantity,setQuantity}) {
+
+     
 
   const handleQuantityPlus = () =>{
     setQuantity(quantity+1)
@@ -27,6 +27,7 @@ export default function AddItem ({setAddCart}) {
   // ajout au panier 
     const handleAddCart = () => {
         setAddCart(quantity)
+        setQuantity(0)
     }
 
     return (

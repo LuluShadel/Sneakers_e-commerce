@@ -1,6 +1,8 @@
 import trash from "../assets/icon-delete.svg"
 import img1small from "../assets/image-product-1-thumbnail.jpg"
 
+
+
 export default function Cart ({cart,addCart,title,newPrice,setAddCart}) {
 
     // vider le panier 
@@ -9,6 +11,7 @@ export default function Cart ({cart,addCart,title,newPrice,setAddCart}) {
     setAddCart(0)
   }
 
+ 
 
 
     return (
@@ -16,7 +19,7 @@ export default function Cart ({cart,addCart,title,newPrice,setAddCart}) {
         <div >
   {cart && (
   <div className='absolute top-0 left-1/2 z-30 bg-white w-[95%] h-3/4 mt-1 -translate-x-1/2 rounded-lg'>
-    <div className='border-b-2 border-slate-200 p-8'>
+    <div className='border-b-2 border-slate-200 p-[5%]'>
       <p className='font-bold'>Cart</p>
     </div>
     {!addCart ? (
