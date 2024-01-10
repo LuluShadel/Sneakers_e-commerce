@@ -4,7 +4,15 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        '80': '80%', // ajout taille police personnalisée
+
+      },
+      screens: {
+        "md":"848px"
+      }
+    },
   },
   plugins: [],
 }
