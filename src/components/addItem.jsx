@@ -31,8 +31,8 @@ export default function AddItem ({setAddCart,quantity,setQuantity}) {
     }
 
     return (
-        <div className="mt-4 mb-12">
-            <div className="bg-slate-200 flex items-center justify-between pl-6 pr-6 rounded-md h-12 mb-4">
+        <div className="mt-4 mb-12 md:flex md:gap-4  ">
+            <div className="bg-slate-200 flex items-center justify-between pl-[5%] pr-[5%] rounded-md h-12 mb-4 md:w-[40%]">
                 <img 
                 src={moins} 
                 alt="moins" 
@@ -48,11 +48,12 @@ export default function AddItem ({setAddCart,quantity,setQuantity}) {
                 />
 
             </div>
-            <div className="bg-orange-500 flex items-center justify-center h-12 rounded-md">
+            <div className="bg-orange-500 flex items-center justify-center h-12 cursor-pointer rounded-md md:w-[60%]"
+            onClick={handleAddCart}>
                 <img src={cart} alt="panier" className=" mr-4" />
                 <p 
-                className="text-white font-semibold cursor-pointer"
-                onClick={handleAddCart}
+                className="text-white font-semibold text-80 "
+                
                 
                 >Add to cart</p>
 

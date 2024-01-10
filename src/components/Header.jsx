@@ -5,6 +5,8 @@ import avatar from "../assets/image-avatar.png"
 import close from "../assets/icon-close.svg"
 
 
+
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -78,7 +80,7 @@ return (
         )}
         </div>
         <img src={avatar} alt="Avatar client" className="h-7 md:h-12 cursor-pointer" />
-
+        
     </div>
 </div>
 

@@ -33,23 +33,32 @@ export default function Home () {
             addCart={addCart}
             
             />
+            <div className="md:flex md:justify-between md:gap-10">
             <CarouselSmall 
             cart={cart}
             setCart={setCart}
             addCart={addCart}
             setAddCart={setAddCart}
-            newPrice={newPrice}
             title={title}
+            newPrice={newPrice}
+
+            
             
 
              />
 
 
-             <div className="ml-4 mr-4">
+             <div className="ml-4 mr-4 md:w-3/4 ">
              <Text 
              brand={brand} 
              title={title} 
              text={text} 
+             newPrice={newPrice}
+             cart={cart}
+             setAddCart={setAddCart}
+             addCart={addCart}
+             
+            
              />
 
              <Price
@@ -66,6 +75,7 @@ export default function Home () {
               />
 
 
+             </div>
              </div>
         </div>
     )

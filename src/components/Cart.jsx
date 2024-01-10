@@ -18,7 +18,7 @@ export default function Cart ({cart,addCart,title,newPrice,setAddCart}) {
       
         <div >
   {cart && (
-  <div className='absolute top-0 left-1/2 z-30 bg-white w-[95%] h-3/4 mt-1 -translate-x-1/2 rounded-lg'>
+  <div className='absolute top-0 left-1/2 z-30 bg-white w-[95%] h-3/4  mt-1 -translate-x-1/2 rounded-lg shadow-lg md:h-[300px] md:top-20 max-w-[300px] md:translate-x-0 md:right-[1em] md:left-auto '>
     <div className='border-b-2 border-slate-200 p-[5%]'>
       <p className='font-bold'>Cart</p>
     </div>

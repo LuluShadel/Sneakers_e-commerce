@@ -60,6 +60,7 @@ const Carousel = ({cart,addCart,title,newPrice,setAddCart}) => {
       >
         <img src={arrowRight} alt='fleche' />
       </div>
+      <div className=' block md:hidden '>
       <Cart
       cart={cart}
       setAddCart={setAddCart}
@@ -68,7 +69,7 @@ const Carousel = ({cart,addCart,title,newPrice,setAddCart}) => {
       newPrice={newPrice}
 
        />
-      
+      </div>
     </div>
   );
 };
