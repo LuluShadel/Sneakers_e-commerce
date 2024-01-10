@@ -1,5 +1,6 @@
 import Header from "../components/Header";
 import CarouselSmall from "../components/Carrousel"
+import CarrousselDesktop from "../components/CarrouselDesktop";
 import Text from "../components/Text"
 import Price from "../components/Price";
 import AddItem from "../components/addItem";
@@ -34,6 +35,7 @@ export default function Home () {
             
             />
             <div className="md:flex md:justify-between md:gap-10">
+                <div className="md:hidden">
             <CarouselSmall 
             cart={cart}
             setCart={setCart}
@@ -41,14 +43,13 @@ export default function Home () {
             setAddCart={setAddCart}
             title={title}
             newPrice={newPrice}
-
-            
-            
-
              />
+             </div>
+            <div className="hidden md:block">
+             <CarrousselDesktop />
+             </div>
 
-
-             <div className="ml-4 mr-4 md:w-3/4 ">
+             <div className="ml-4 mr-4 md:w-3/4 md:mt-20 ">
              <Text 
              brand={brand} 
              title={title} 

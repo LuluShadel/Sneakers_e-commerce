@@ -49,13 +49,13 @@ const Carousel = ({cart,addCart,title,newPrice,setAddCart}) => {
         </div>
       
       <div
-        className="absolute top-1/2 cursor-pointer left-0 rounded-full bg-white p-3 ml-4"
+        className="absolute top-1/2 cursor-pointer left-0 rounded-full bg-white p-3 ml-4 md:hidden"
         onClick={() => changeSlide(-1)}
         >
         <img src={arrowLeft} alt='fleche' />
       </div>
       <div 
-      className="absolute top-1/2 cursor-pointer right-0 rounded-full bg-white p-3 mr-4"
+      className="absolute top-1/2 cursor-pointer right-0 rounded-full bg-white p-3 mr-4 md:hidden"
       onClick={() => changeSlide(1)} 
       >
         <img src={arrowRight} alt='fleche' />
