@@ -6,6 +6,8 @@ import Price from "../components/Price";
 import AddItem from "../components/addItem";
 
 
+
+
 import data from "../assets/data"
 
 import { useState } from "react";
@@ -25,6 +27,14 @@ export default function Home () {
     // contrôle quantité du client
   const [quantity, setQuantity] = useState(0)
 
+  // carrousel mobile et modal
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // affichage modale caroussel
+  const[openModalCarrousel,setOpenModalCarrousel]= useState(false)
+
+  
+
     return (
         <div>
       
@@ -43,10 +53,18 @@ export default function Home () {
             setAddCart={setAddCart}
             title={title}
             newPrice={newPrice}
+            currentSlide={currentSlide}
+            setCurrentSlide={setCurrentSlide}
              />
              </div>
             <div className="hidden md:block">
-             <CarrousselDesktop />
+             <CarrousselDesktop
+             setOpenModalCarrousel={setOpenModalCarrousel}
+             openModalCarrousel={openModalCarrousel}
+             setCurrentSlide={setCurrentSlide}
+             currentSlide={currentSlide}
+             
+              />
              </div>
 
              <div className="ml-4 mr-4 md:w-3/4 md:mt-20 ">

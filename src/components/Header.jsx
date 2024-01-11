@@ -37,7 +37,7 @@ export default function Header({cart,setCart,addCart}) {
 
 return (
 
-    <div className="flex m-2 justify-between items-center md:border-b-2 md:mt-6 md:pb-10">
+    <div className="flex m-2 justify-between items-center md:border-b-2 md:mt-6 md:pb-10 md:mb-14">
     <div className="flex gap-4 items-center">
         <img src={iconmenu} alt="icon menu" onClick={handleMenu} className="cursor-pointer md:hidden" />
         <img src={logo} alt="Logo" />

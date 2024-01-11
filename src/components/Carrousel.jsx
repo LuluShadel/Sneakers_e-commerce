@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion} from 'framer-motion';
 import img1 from "../assets/image-product-1.jpg";
 
@@ -18,10 +18,9 @@ const transition = { duration: 0.5, ease: 'easeInOut' };
 
 
 
-const Carousel = ({cart,addCart,title,newPrice,setAddCart}) => {
+const Carousel = ({cart,addCart,title,newPrice,setAddCart,setCurrentSlide,currentSlide}) => {
 
-  // carrousel
-  const [currentSlide, setCurrentSlide] = useState(0);
+  
 
   const showSlide = (slideIndex) => {
     setCurrentSlide((slideIndex + images.length) % images.length);
