@@ -47,7 +47,7 @@ export default function Home () {
             addCart={addCart}
             
             />
-            <div className="md:flex md:justify-between md:gap-10">
+            <div className="md:flex  md:gap-20 items-center justify-center">
                 <div className="md:hidden">
             <CarouselSmall 
             cart={cart}
@@ -72,7 +72,7 @@ export default function Home () {
               />
              </div>
 
-             <div className="ml-4 mr-4 md:w-3/4 md:mt-20 ">
+             <div className="ml-4 mr-4 md:max-w-[40%] md:mt-20 ">
              <Text 
              brand={brand} 
              title={title} 
