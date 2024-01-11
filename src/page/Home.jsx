@@ -5,6 +5,9 @@ import Text from "../components/Text"
 import Price from "../components/Price";
 import AddItem from "../components/addItem";
 
+import arrowLeft from "../assets/icon-previous.svg";
+import arrowRight from "../assets/icon-next.svg";
+
 
 
 
@@ -63,6 +66,8 @@ export default function Home () {
              openModalCarrousel={openModalCarrousel}
              setCurrentSlide={setCurrentSlide}
              currentSlide={currentSlide}
+             arrowLeft={arrowLeft}
+             arrowRight={arrowRight}
              
               />
              </div>
