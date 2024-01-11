@@ -51,8 +51,8 @@ return (
       key={currentSlide}
       src={images[currentSlide]}
         alt="article"
-        className="h-[25em]  rounded-xl  "
-        onClick={handleOpen}
+        className={`h-[25em] rounded-xl ${!isInsideModal ? 'cursor-pointer' : ''}`}
+        onClick={!isInsideModal ? handleOpen : undefined}
       />
       {isInsideModal && (
       <div
@@ -77,7 +77,7 @@ return (
           src={small_img1}
           alt="article"
           onClick={() => handleChangeImg(0)}
-          className={`h-[5em] rounded-xl hover:opacity-70 ${
+          className={`h-[5em] rounded-xl cursor-pointer hover:opacity-70 ${
             currentSlide === 0 ? "border-orange-500 border-4 opacity-70" : ""
           }`}
         />
@@ -85,7 +85,7 @@ return (
           src={small_img2}
           alt="article"
           onClick={() => handleChangeImg(1)}
-          className={`h-[5em] rounded-xl hover:opacity-70 ${
+          className={`h-[5em] rounded-xl cursor-pointer hover:opacity-70 ${
             currentSlide === 1 ? "border-orange-500 border-4 opacity-70" : ""
           }`}
         />
@@ -93,7 +93,7 @@ return (
           src={small_img3}
           alt="article"
           onClick={() => handleChangeImg(2)}
-          className={`h-[5em] rounded-xl hover:opacity-70 ${
+          className={`h-[5em] rounded-xl cursor-pointer hover:opacity-70 ${
             currentSlide === 2 ? "border-orange-500 border-4 opacity-70" : ""
           }`}
         />
@@ -101,7 +101,7 @@ return (
           src={small_img4}
           alt="article"
           onClick={() => handleChangeImg(3)}
-          className={`h-[5em] rounded-xl hover:opacity-70 ${
+          className={`h-[5em] rounded-xl cursor-pointer hover:opacity-70 ${
             currentSlide === 3 ? "border-orange-500 border-4 opacity-70" : ""
           }`}
         />
